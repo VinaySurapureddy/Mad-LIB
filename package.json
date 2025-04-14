@@ -1,0 +1,13 @@
+{
+  "name": "mad-lib-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js local"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "forever": "^4.0.3",
+    "morgan": "^1.10.0"
+  }
+}

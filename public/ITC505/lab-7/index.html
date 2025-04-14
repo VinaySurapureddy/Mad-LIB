@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create a story!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="https://images2.penguinrandomhouse.com/cover/9780399541711" alt="Mad Lib" class="header-image" />
+    <h1>Create a Story!</h1>
+    <form action="/submit" method="POST" class="madlib-form">
+      <label for="noun">Noun:</label>
+      <input type="text" id="noun" name="noun" required />
+
+      <label for="verb">Verb:</label>
+      <input type="text" id="verb" name="verb" required />
+
+      <label for="adjective">Adjective:</label>
+      <input type="text" id="adjective" name="adjective" required />
+
+      <label for="adverb">Adverb:</label>
+      <input type="text" id="adverb" name="adverb" required />
+
+      <label for="place">Place:</label>
+      <input type="text" id="place" name="place" required />
+
+      <button type="submit">Generate Story</button>
+    </form>
+
+    <section class="addendum">
+      <h2>Addendum</h2>
+      <p>
+        This lab implements a Mad Lib generator using an HTML form and a Node.js/ExpressJS backend.
+        The form submits via POST to the same URL and dynamically generates a custom story using string interpolation.
+      </p>
+      <p>
+        A standalone <code>/do_a_random/</code> route was implemented to serve a random number when accessed via browser directly (e.g., <code>http://localhost:8080/do_a_random/</code>), fulfilling the routing requirement.
+      </p>
+      <p>
+        Styling was kept minimal for clarity. Page verified at <code>http://localhost:8080/ITC505/lab-7/index.html</code> with all required features functional, including the footer script.
+      </p>
+    </section>
+
+    <footer>
+      <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+    <script type="text/javascript'">
+      var x = document.lastModified;
+      document.getElementById('lastModified').textContent = x;
+    </script>
+  </div>
+</body>
+</html>
